@@ -1,0 +1,41 @@
+Additional time is required to perform synchronization. 
+After each individual write operation, synchronization is performed, 
+so in this case, the buffer size will have a greater impacton the time
+spent on synchronization. Therefore, the speed will be improved.
+
+Default:
+real    0m 0.19s
+user    0m 0.03s
+sys     0m 0.01s
+10:
+real    0m 0.21s
+user    0m 0.01s
+sys     0m 0.03s
+1000:
+real    0m 0.18s
+user    0m 0.03s
+sys     0m 0.03s
+1000000:
+real    0m 0.18s
+user    0m 0.01s
+sys     0m 0.03s
+
+With the use of O_SYNC flag:           
+Default:
+real    0m 0.23s
+user    0m 0.00s
+sys     0m 0.04s
+10:
+real    0m 0.17s
+user    0m 0.00s
+sys     0m 0.03s
+1000:
+real    0m 0.19s
+user    0m 0.04s
+sys     0m 0.00s
+1000000:
+real    0m 0.19s
+user    0m 0.00s
+sys     0m 0.06s
+
+                    
